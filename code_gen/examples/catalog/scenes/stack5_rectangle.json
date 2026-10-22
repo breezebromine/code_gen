@@ -1,0 +1,87 @@
+{
+  "description": "Rectangle integration example using an externally prepared Stack5 scene. Configure scene_file and its USD dependencies; logs/codegen_assets is not distributed with code_gen.",
+  "scene_file": "logs/codegen_assets/stack5_random_20260921_01/scene.json",
+  "default_robot": "aloha_auto",
+  "default_run": "default",
+  "objects": {
+    "rectangle_blue": "rectangle_blue"
+  },
+  "overrides": {
+    "targets": {
+      "table_drop_zone": {
+        "label": "桌面空闲放置区域",
+        "position": [
+          0.25,
+          -0.02,
+          0
+        ],
+        "surface_only": true,
+        "approach_height_m": 0.08
+      }
+    },
+    "support_contacts": {
+      "rectangle_blue": {
+        "support_id": "rectangle_yellow",
+        "distance_m": 0.012
+      }
+    }
+  },
+  "randomization": {
+    "rigid_groups": [
+      {
+        "pivot_object": "Base",
+        "objects": [
+          "Base",
+          "circle_yellow",
+          "circle_blue",
+          "circle_red",
+          "circle_green",
+          "rectangle_yellow",
+          "rectangle_blue",
+          "rectangle_red",
+          "rectangle_green",
+          "triangle_yellow",
+          "triangle_blue",
+          "triangle_red",
+          "triangle_green",
+          "square_yellow",
+          "square_blue",
+          "square_red",
+          "square_green",
+          "pentagon_yellow",
+          "pentagon_blue",
+          "pentagon_red",
+          "pentagon_green"
+        ],
+        "targets": [],
+        "x_range_m": [
+          0.15,
+          0.65
+        ],
+        "y_range_m": [
+          -0.4,
+          0.4
+        ],
+        "yaw_range_deg": [
+          -180,
+          180
+        ],
+        "table_bounds_xy": [
+          [
+            0.1,
+            0.7
+          ],
+          [
+            -0.5,
+            0.5
+          ]
+        ],
+        "edge_margin_m": 0.01,
+        "clearance_targets": [
+          "table_drop_zone"
+        ],
+        "target_clearance_m": 0.06
+      }
+    ]
+  }
+}
