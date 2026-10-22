@@ -1,0 +1,24 @@
+{
+  "task_name": "rectangle_to_table_50",
+  "scene": "stack5_rectangle",
+  "robot": "aloha_auto",
+  "instruction": "取下顶部蓝色长方形片，放到桌面空闲区域，松开夹爪并撤离，稳定保持一秒。不要扰动其他物体。",
+  "success": {
+    "type": "table_placement",
+    "object": "rectangle_blue",
+    "target": "table_drop_zone"
+  },
+  "episodes": 50,
+  "development": {
+    "generation_seed": 0,
+    "validation_seeds": [
+      1,
+      2
+    ],
+    "max_versions": 3
+  },
+  "collection": {
+    "start_seed": 1000,
+    "max_cases": 0
+  }
+}
