@@ -1,0 +1,33 @@
+{
+  "description": "Top blue rectangular tile, bottom-origin, 28 x 62 x 9.5 mm. Requires the configured external Stack5 asset; these example dimensions/frames are not a physics validation claim.",
+  "overrides": {
+    "grasps_by_robot": {
+      "aloha": {
+        "default_grasp_id": "top",
+        "grasp_frames": [
+          {
+            "id": "top",
+            "pose_object": [
+              0,
+              0,
+              0.009915089247263097,
+              0.7071067811865476,
+              0,
+              0.7071067811865476,
+              0
+            ],
+            "close_width_m": 0.0,
+            "lift_height_m": 0.08
+          }
+        ],
+        "yaw_samples": 16,
+        "tilt_candidates_deg": [
+          0
+        ],
+        "prefer_level_fingers": true,
+        "note": "Example Aloha TCP frame, not physically certified. USD preparation selects an explicit library, associated source annotations, or generated candidates; execution must verify contact and object following."
+      }
+    }
+  },
+  "instruction_hint": "先竖直取下，再放到桌面。无需回 home。使用当前物体的抓取帧并检查每个动作结果。"
+}
